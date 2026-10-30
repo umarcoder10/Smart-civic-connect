@@ -11,8 +11,8 @@ from fastapi.staticfiles import StaticFiles
 from ai import analyse_report
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-DB_PATH = os.path.join(BASE_DIR, "database.db")
-UPLOAD_DIR = os.path.join(BASE_DIR, "uploads")
+DB_PATH = "/tmp/database.db"
+UPLOAD_DIR = "/tmp/uploads"
 os.makedirs(UPLOAD_DIR, exist_ok=True)
 
 VALID_STATUSES = {"open", "in_progress", "resolved"}
